@@ -1,0 +1,705 @@
+/* style.css */
+
+/* Basic Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    line-height: 1.7; /* Increased line-height for better readability */
+    color: #000; /* Text color set to black for contrast with dark blue */
+    overflow-x: hidden;
+    background-color: #003366; /* Dark blue background */
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased; /* Improve font rendering */
+}
+
+h1, h2, h3 {
+    font-weight: 700; /* Stronger headings */
+    color: #000; /* Black text color for headings */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Hero Section */
+#hero-section {
+    background-color: #003366; /* Dark blue background */
+    padding: 180px 0; /* More padding */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("photos/hero-background.jpg"); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+    animation: zoomInOut 15s linear infinite alternate; /* Slower zoom */
+}
+
+@keyframes zoomInOut {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); } /* Less zoom */
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #000; /* Black text color */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow */
+}
+
+#hero-section h1 {
+    font-size: 4em;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+#hero-section p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+}
+
+#hero-section button {
+    padding: 18px 35px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Button shadow */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+#hero-section button:hover {
+    background-color: #0056b3;
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Sections */
+#video-section, #key-services, #why-choose-us, #reviews, #about-us, #image-gallery, #certificate-section, #portfolio, #contact {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #003366; /* Dark blue background */
+    border-bottom: 1px solid #eee;
+    overflow: hidden; /* Important for reveal animation */
+}
+
+/* Containers */
+.video-container, .services-grid, .statistics, .reviews-container, .about-container, .gallery-container, .portfolio-container, .contact-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Video */
+.video-item { margin-bottom: 20px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); border-radius: 8px;}
+.fiverr-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #1dbf73;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.fiverr-btn:hover {
+    background-color: #19a363;
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Grids (Services, Statistics, Portfolio) */
+.services-grid, .statistics, .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Wider minmax */
+    gap: 35px; /* More gap */
+}
+
+.service-item, .stat, .portfolio-item {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover, .stat:hover, .portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-item img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.portfolio-item img:hover{
+    transform: scale(1.03);
+}
+
+/* Reviews */
+.review-card {
+    border: none; /* Removed border */
+    padding: 35px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    margin-bottom: 30px;
+    background-color: #555555;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.review-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.stars {
+    color: gold;
+    font-size: 1.3em;
+}
+
+/* About Us */
+.about-card {
+    text-align: left;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.photo-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+.profile-photo:hover{
+    transform: scale(1.05);
+}
+
+/* Image Gallery */
+.gallery-container {
+    display: flex;
+    gap: 40px;
+}
+
+/* ... (Previous CSS) ... */
+
+/* Image Gallery */
+#image-gallery {
+    background-color: #003366; /* Dark blue background */
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.gallery-container {
+    max-width: 1200px; /* Increased max-width */
+    margin: 30px auto; /* More margin */
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Added flex-wrap for responsiveness */
+    justify-content: center; /* Center the images */
+}
+
+.gallery-left, .gallery-right {
+    flex: 1 1 45%; /* Adjusted flex basis for better wrapping */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gallery-image {
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden; /* Prevents image distortion during scaling */
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Added for consistent image height and object-fit */
+.gallery-image img {
+    width: 100%;
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    transition: transform 0.3s;
+}
+.gallery-image:hover img{
+    transform: scale(1.1);
+}
+
+/* Certificate Section */
+#certificate-section {
+    background-color: #003366; /* Dark blue background */
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.certificate-item {
+    max-width: 700px; /* Reduced max-width for a more compact certificate */
+    margin: 20px auto; /* Reduced margin for tighter spacing */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Moderate shadow depth */
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Moderate shadow on hover */
+}
+
+.certificate-item img {
+    width: 100%;
+    max-height: 500px; /* Reduced maximum height */
+    object-fit: contain; /* Prevents stretching */
+    border-radius: 10px;
+    margin-bottom: 15px; /* Reduced margin between image and text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Reduced shadow */
+    transition: transform 0.3s;
+}
+
+.certificate-item img:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.certificate-item p {
+    font-style: italic;
+    color: #777;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .certificate-item {
+        max-width: 90%; /* Occupy more width on smaller screens */
+        padding: 15px; /* Less padding on smaller screens */
+        margin: 15px auto;
+    }
+
+    .certificate-item img {
+        max-height: 350px; /* Adjust image height for smaller screens */
+    }
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #003366; /* Dark blue background */
+    padding: 100px 0;
+    text-align: center;
+    border-bottom: none;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#contact h2 {
+    margin-bottom: 40px;
+    color: #000; /* Black text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Details Layout */
+.contact-details {
+    display: flex;
+    justify-content: center; /* Center the content */
+    gap: 30px;
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    width: 280px; /* Set a fixed width for each item */
+    margin: 10px; /* Add some margin for spacing between items */
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+    background-color: #007bff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item h3 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #777;
+    font-size: 1.1em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #contact {
+        padding: 60px 0; /* Less padding for mobile view */
+    }
+
+    .contact-details {
+        gap: 20px; /* Reduce gap between items */
+    }
+
+    .contact-item {
+        width: 90%; /* Make items full width on smaller screens */
+        margin: 10px 0; /* Add vertical margin between items */
+    }
+
+    .contact-icon {
+        width: 35px;
+        height: 35px; /* Slightly smaller icons */
+    }
+
+    .contact-item h3 {
+        font-size: 1.2em; /* Slightly smaller font size for headings */
+    }
+
+    .contact-item p {
+        font-size: 1em; /* Slightly smaller font size for paragraph text */
+    }
+}
+
+/* Very Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .contact-item {
+        width: 100%; /* Ensure the items take full width */
+        padding: 20px; /* Reduce padding for very small screens */
+    }
+
+    .contact-icon {
+        width: 30px;
+        height: 30px; /* Further reduce icon size */
+    }
+
+    .contact-item h3 {
+        font-size: 1.1em; /* Further reduce heading size */
+    }
+
+    .contact-item p {
+        font-size: 0.9em; /* Further reduce paragraph text size */
+    }
+}
+
+/* Animated Welcome Message */
+#hero-section h1 {
+    font-size: 4em;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Change Card Colors & Deep Shadows */
+.service-item, .stat, .portfolio-item, .review-card, .about-card, .certificate-item {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff; /* Change to white or any other color you prefer */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover, .stat:hover, .portfolio-item:hover, .review-card:hover, .about-card:hover, .certificate-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4); /* Deeper hover shadow */
+}
+
+.review-card, .service-item, .stat, .portfolio-item, .certificate-item {
+    background-color: #f9f9f9; /* Slightly off-white background */
+}
+
+.about-card {
+    background-color: #eef2f7; /* Light background for the About section */
+}
+
+/* ... (Other CSS remains unchanged) ... */
+/* Navigation Bar Styles */
+#navbar {
+    background-color: #1a237e; /* Deep Blue background */
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#navbar .logo {
+    font-size: 1.8em;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#navbar .logo:hover {
+    color: #ffeb3b; /* Highlight logo on hover */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffeb3b; /* Yellow on hover */
+}
+
+/* Burger Menu (for mobile view) */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-line {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a237e; /* Deep Blue background for dropdown */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
+/* Smooth transition for the nav */
+.nav-links a {
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+/* Active state for burger menu */
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+/* About Me Section */
+#about-me {
+    background-color: #003366; /* Dark Blue Background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #f4f4f4; /* Lighter background for the card */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Add padding to prevent image clipping */
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 250px; /* Keep image size larger to make hair visible */
+    height: 250px;
+    object-fit: contain; /* Ensures the whole image is visible */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 2;
+    text-align: left;
+}
+
+.about-text h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.about-text p {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-card {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .photo-container {
+        margin-bottom: 20px;
+    }
+
+    .profile-photo {
+        width: 220px; /* Adjust size for smaller screens */
+        height: 220px;
+    }
+
+    .about-text h2 {
+        font-size: 1.6em;
+    }
+
+    .about-text p {
+        font-size: 1em;
+    }
+}
+
+/* Very Small Devices (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-text h2 {
+        font-size: 1.4em;
+    }
+
+    .about-text p {
+        font-size: 0.9em;
+    }
+}
