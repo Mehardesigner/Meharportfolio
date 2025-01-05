@@ -703,3 +703,60 @@ a {
         font-size: 0.9em;
     }
 }
+<style>
+#about-me-rolling {
+    background: linear-gradient(135deg, #003366, #007bff);
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.rolling-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rolling-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    max-width: 600px;
+    text-align: center;
+    animation: rollIn 1.5s ease-out;
+}
+
+.rolling-photo img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid #007bff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.rolling-title {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-top: 20px;
+}
+
+.rolling-text {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 15px;
+}
+
+@keyframes rollIn {
+    from {
+        transform: translateX(-100%) rotate(-360deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotate(0);
+        opacity: 1;
+    }
+}
+</style>
