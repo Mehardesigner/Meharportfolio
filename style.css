@@ -300,48 +300,42 @@ body {
     background-color: #1a1a1a;
     color: #fff;
 }
-
 /* Video Showcase Section */
 #video-showcase {
     padding: 50px 20px;
     text-align: center;
-    background-color: #222;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow: hidden; /* Prevent extra space */
 }
 
+/* Title and Description */
 #video-showcase h2 {
     font-size: 2.5rem;
-    color: #fff;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 #video-showcase p {
     font-size: 1.2rem;
-    color: #ddd;
     margin-bottom: 30px;
 }
 
 /* Video Container */
 .video-container {
     position: relative;
-    width: 80%; /* Default for PC */
-    max-width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    background: #000;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 900px; /* Adjust max-width for larger screens */
     margin: 0 auto;
 }
 
+/* Video iframe */
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 500px; /* Adjust height to make it smaller */
     border: none;
-    border-radius: 10px;
 }
 
 /* Fiverr Button Section */
@@ -392,34 +386,40 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
-    .video-container {
-        width: 90%; /* Smaller size for tablet and smaller desktop */
+    .video-container iframe {
+        height: 400px; /* Adjust height for tablet */
     }
 }
 
 @media (max-width: 768px) {
+    .video-container iframe {
+        height: 300px; /* Adjust height for mobile devices */
+    }
+
     #video-showcase h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Slightly smaller text */
     }
 
     #video-showcase p {
-        font-size: 1rem;
-    }
-
-    .video-container {
-        width: 100%; /* Full width for mobile devices */
+        font-size: 1rem; /* Smaller text for description */
     }
 }
 
 @media (max-width: 480px) {
+    .video-container iframe {
+        height: 250px; /* Adjust height for very small screens */
+    }
+
     #video-showcase h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Smaller title */
     }
 
     #video-showcase p {
-        font-size: 0.9rem;
+        font-size: 0.9rem; /* Smaller text */
     }
 }
+
+
 /* Services Section */
 .services {
     padding: 50px 20px;
@@ -1232,4 +1232,108 @@ footer p {
     footer p {
         font-size: 12px;
     }
+}
+/* Certificates Section */
+.certificates-section {
+    padding: 50px 20px;
+    background: #1e1e2f;
+    color: #fff;
+    text-align: center;
+}
+
+.certificates-section h2 {
+    font-size: 3rem; /* Increased font size */
+    color: #ff6600;
+    margin-bottom: 30px;
+}
+
+.certificates-section p {
+    font-size: 1.3rem; /* Increased font size */
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2b2b3d;
+    padding: 30px; /* Increased padding */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Deep shadow */
+    max-width: 600px; /* Increased max-width */
+    margin: 0 auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.certificate-card:hover {
+    transform: scale(1.08); /* Slightly bigger scale effect */
+    box-shadow: 0 15px 35px rgba(255, 102, 0, 0.6); /* Deeper shadow on hover */
+}
+
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded image corners */
+    margin-bottom: 30px; /* Increased margin */
+}
+
+.certificate-details {
+    text-align: center;
+}
+
+.certificate-details h3 {
+    font-size: 2rem; /* Increased font size */
+    color: #ff6600;
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.certificate-details p {
+    font-size: 1.1rem; /* Slightly bigger font size */
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificate-card {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .certificate-details h3 {
+        font-size: 1.6rem; /* Adjusted for mobile */
+    }
+
+    .certificate-section h2 {
+        font-size: 2rem; /* Adjusted for mobile */
+    }
+
+    .certificate-details p {
+        font-size: 1rem; /* Adjusted for mobile */
+    }
+}
+/* Order Now Button */
+.order-now-btn {
+    display: inline-block;
+    margin-top: 20px; /* Space between certificate details and button */
+    padding: 15px 30px; /* Button padding */
+    background-color: #ff6600; /* Button color */
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.order-now-btn:hover {
+    background-color: #e55d00; /* Slightly darker on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px); /* Slightly lift effect */
+}
+
+.order-now-btn:active {
+    background-color: #ff6600; /* Original color when clicked */
+    transform: translateY(1px); /* Slightly depressed effect */
 }
